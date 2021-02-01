@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>gpri</artifactId>
+    <groupId>bo.gob.sin.sre</groupId>
+    <version>0.8.0.0-SNAPSHOT</version>
+  </parent>
+  <groupId>bo.gob.sin.sre</groupId>
+  <artifactId>gpri.client</artifactId>
+  <version>0.8.0.0-SNAPSHOT</version>
+  <dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>2.3.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+			<version>2.3.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>bo.gob.sin.str</groupId>
+			<artifactId>cexc</artifactId>
+			<version>2.1.0.0</version>
+		</dependency>
+		<dependency>
+	  		<groupId>bo.gob.sin.str</groupId>
+	  		<artifactId>enum</artifactId>
+	  		<version>2.1.0.0</version>
+	  	</dependency>
+	  	<!-- 		resiliencia -->
+		<dependency>
+		    <groupId>io.github.resilience4j</groupId>
+		    <artifactId>resilience4j-spring-boot2</artifactId>
+		    <version>1.3.1</version>
+		</dependency>
+      <dependency>
+          <groupId>bo.gob.sin.sre.gpri</groupId>
+          <artifactId>gpri.dto</artifactId>
+          <version>0.8.0.0-SNAPSHOT</version>
+          <scope>compile</scope>
+      </dependency>
+	  <dependency>
+		  <groupId>bo.gob.sin.str.caut</groupId>
+		  <artifactId>caut.security</artifactId>
+		  <version>1.1.0.1</version>
+		  <scope>compile</scope>
+	  </dependency>
+  </dependencies>
+</project>

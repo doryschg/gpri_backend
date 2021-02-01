@@ -1,0 +1,10 @@
+# Consultar estado de cuentas
+0 12 * * 1-6 java -jar /opt/gpri-validacion.jar 2>&1
+0 17 * * 1-6 java -jar /opt/gpri-validacion.jar 2>&1
+30 9 * * 1-6 java -jar /opt/gpri-validacion.jar 2>&1
+
+# Registrar pagos
+*/30 * * * * java -jar /opt/gpri-registro.jar 2>&1
+
+#*/4 * * * 1-6 java -jar /opt/gpri-validacion.jar 2>&1
+# Habilitar la linea anterior solo para pruebas (Se ejecuta cada cuatro minutos)

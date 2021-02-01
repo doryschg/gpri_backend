@@ -1,0 +1,28 @@
+spring:
+   profiles:
+      active: local 
+   application:
+      name: sre_fac_gpri_camunda
+   cloud:
+      consul:
+         host: 10.1.17.65
+         port: 8500
+         discovery:
+            register-health-check: true
+            register: true
+            tags: version=1.0
+            instance-id: "${spring.cloud.client.hostname}:${spring.application.name}:${random.int[1,999999]}"
+            ip-address: "${NODE_IP}"
+            prefer-ip-address: true
+            healthCheckInterval: 15s
+            health-check-url: http://${spring.cloud.client.ip-address}:${server.port}/actuator/health
+         config:
+            enabled: true
+            format: PROPERTIES
+            fail-fast: true
+            watch:
+             enabled: true 
+  
+logstash:
+  servers: 10.1.17.33:5050
+logfolder: c:/Temp/  

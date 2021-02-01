@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>bo.gob.sin.sre</groupId>
+		<artifactId>gpri</artifactId>
+		<version>0.8.0.0-SNAPSHOT</version>
+	</parent>
+	<groupId>bo.gob.sin.sre.gpri</groupId>
+	<artifactId>gpri.service</artifactId>
+	<version>0.8.0.0-SNAPSHOT</version>
+	<build>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+				<targetPath>${basedir}/target/classes</targetPath>
+				<includes>
+					<include>**/*.png</include>
+					<include>**/*.jasper</include>
+					<include>**/*.jrxml</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>bo.gob.sin.sre.gpri</groupId>
+			<artifactId>gpri.dto</artifactId>
+			<version>0.8.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>bo.gob.sin.sre.gpri</groupId>
+			<artifactId>gpri.domain</artifactId>
+			<version>0.8.0.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>bo.gob.sin.str.cmsj.mapl</groupId>
+			<artifactId>mapl.domain</artifactId>
+			<version>1.1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>bo.gob.sin.sre</groupId>
+			<artifactId>gpri.client</artifactId>
+			<version>0.8.0.0-SNAPSHOT</version>
+		</dependency>
+		<!-- Depedencia API Servicios SIGEP -->
+		<dependency>
+			<groupId>bo.gob.sin.sit.api</groupId>
+			<artifactId>api.rest</artifactId>
+			<version>0.17.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>bo.gob.sin.sit.api</groupId>
+			<artifactId>api.client</artifactId>
+			<version>0.17.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.asynchttpclient</groupId>
+			<artifactId>async-http-client</artifactId>
+			<version>2.10.1</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>6.4.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>bo.gob.sin.str.ccs</groupId>
+			<artifactId>ccs.repo</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>bo.gob.sin.sre</groupId> -->
+		<!-- <artifactId>gpri.client</artifactId> -->
+		<!-- <version>0.8.0.0-SNAPSHOT</version> -->
+		<!-- <scope>compile</scope> -->
+		<!-- </dependency> -->
+
+
+		<!-- <dependency> -->
+		<!-- <groupId>bo.gob.sin.sit.log.transactional</groupId> -->
+		<!-- <artifactId>log.transactional</artifactId> -->
+		<!-- <version>0.17.1.1-SNAPSHOT</version> -->
+		<!-- </dependency> -->
+	</dependencies>
+</project>

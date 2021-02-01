@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>bo.gob.sin.sre</groupId>
+		<artifactId>gpri</artifactId>
+		<version>0.8.0.0-SNAPSHOT</version>
+	</parent>
+	<groupId>bo.gob.sin.sre.gpri</groupId>
+	<artifactId>gpri.dto</artifactId>
+	<version>0.8.0.0-SNAPSHOT</version>
+
+	<dependencies>
+		<dependency>
+			<groupId>bo.gob.sin.str.cmsj.mapl</groupId>
+			<artifactId>mapl.dto</artifactId>
+			<version>1.1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>bo.gob.sin.str</groupId>
+			<artifactId>enum</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>bo.gob.sin.str.cps.clas</groupId>
+			<artifactId>clas.dto</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>bo.gob.sin.scn.empa.capd.apnd</groupId>-->
+<!--			<artifactId>apnd.dto</artifactId>-->
+<!--			<version>0.16.0.0</version>-->
+<!--		</dependency>-->
+	</dependencies>
+</project>

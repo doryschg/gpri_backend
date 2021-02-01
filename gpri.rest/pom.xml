@@ -1,0 +1,169 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>bo.gob.sin.sre</groupId>
+	<artifactId>gpri.rest</artifactId>
+	<version>0.8.0.0-SNAPSHOT</version>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.1.RELEASE</version>
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>11</java.version>
+		<org.hibernate.version>5.4.17.Final</org.hibernate.version>
+		<spring.version>5.2.7.RELEASE</spring.version>
+		<spring.cloud.version>2.2.3.RELEASE</spring.cloud.version>
+		<com.fasterxml.jackson.core.version>2.9.2</com.fasterxml.jackson.core.version>
+		<ch.qos.logback.version>1.1.8</ch.qos.logback.version>
+		<org.slf4j.version>1.7.20</org.slf4j.version>
+	</properties>
+
+	<build>
+		<finalName>sre-sfe-gpri-rest</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>build-info</id>
+						<goals>
+							<goal>build-info</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<!-- SPRING -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-devtools</artifactId> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-data-jpa</artifactId> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-actuator-autoconfigure</artifactId> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-pool2</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+		<!-- Spring Framework Caching Support -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-cache</artifactId> -->
+		<!-- </dependency> -->
+
+		<!-- Base de Datos -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgresql.version}</version>
+		</dependency>
+		<!-- LOGSTASH -->
+<!--		<dependency>-->
+<!--			<groupId>net.logstash.logback</groupId>-->
+<!--			<artifactId>logstash-logback-encoder</artifactId>-->
+<!--			<version>6.2</version>-->
+<!--		</dependency>-->
+		<!-- JSON -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+		</dependency>
+		<!-- METRICAS - TRACEO -->
+		<dependency>
+			<groupId>bo.gob.sin.str.util</groupId>
+			<artifactId>util.metricas</artifactId>
+			<version>0.1.0.0</version>
+		</dependency>
+
+		<!-- Dependencias asociadas al negocio -->
+		<dependency>
+			<groupId>bo.gob.sin.str.caut</groupId>
+			<artifactId>caut.security</artifactId>
+			<version>1.1.0.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.postgresql</groupId>
+					<artifactId>postgresql</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>bo.gob.sin.str</groupId> -->
+		<!-- <artifactId>cexc</artifactId> -->
+		<!-- <version>2.1.0.0</version> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>bo.gob.sin.str</groupId>
+			<artifactId>enum</artifactId>
+			<version>2.1.0.0</version>
+		</dependency>
+		<!-- DOcumentacion Swageer -->
+		<dependency>
+			<groupId>bo.gob.sin.str.util</groupId>
+			<artifactId>util.swagger</artifactId>
+			<version>0.1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>bo.gob.sin.sre.gpri</groupId>
+			<artifactId>gpri.service</artifactId>
+			<version>0.8.0.0-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${ch.qos.logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>${ch.qos.logback.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.logstash.logback</groupId>
+			<artifactId>logstash-logback-encoder</artifactId>
+			<version>4.7</version>
+		</dependency>
+	</dependencies>
+</project>

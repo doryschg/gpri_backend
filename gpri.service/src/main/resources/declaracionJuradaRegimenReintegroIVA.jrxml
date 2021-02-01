@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="declaracionJuradaRegimenReintegroIVA" pageWidth="612" pageHeight="792" whenNoDataType="NoPages" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0731342b-d960-4816-be4a-9ec8d8451e44">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="71"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="base" isDefault="true" fontName="Tahoma" fontSize="7"/>
+	<style name="CabeceraTabla" style="base" fontName="Tahoma" fontSize="7" isBold="true"/>
+	<style name="detalleTabla" style="base"/>
+	<style name="titulo3" style="base" isBold="true"/>
+	<style name="titulo2" style="base" fontSize="10" isBold="true"/>
+	<style name="formAnexo" style="base" fontSize="5"/>
+	<parameter name="IMAGE_logo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{IMAGE_logo}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="IMAGE_logo_io" class="java.io.InputStream">
+		<defaultValueExpression><![CDATA[$P{IMAGE_logo_io}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tipoBeneficiario" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{tipoBeneficiario}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tipoUsuario" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{tipoUsuario}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="apellidoPaterno" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{apellidoPaterno}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="apellidoMaterno" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{apellidoMaterno}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="apellidoCasada" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{apellidoCasada}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nombres" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{nombres}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nombreUsuario" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{nombreUsuario}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fechaNacimiento" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[$P{fechaNacimiento}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nuaCua" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{nuaCua}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="numeroOrden" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{numeroOrden}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="numeroDocumentoIdentidad" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{numeroDocumentoIdentidad}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tipoDocumentoIdentidad" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{tipoDocumentoIdentidad}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="correoElectronico" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{correoElectronico}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codigoPersona" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[$P{codigoPersona}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="direccion" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{direccion}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="telefono" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{telefono}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="celular" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{celular}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nroCuenta" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{nroCuenta}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tipoCuenta" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{tipoCuenta}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="entidadFinanciera" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{entidadFinanciera}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nombreCompleto" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{nombreCompleto}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fechaRegistro" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{fechaRegistro}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="segundoSalario" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[$P{segundoSalario}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tercerSalario" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[$P{tercerSalario}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="primerSalario" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[$P{primerSalario}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="periodoPrimerSalario" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{periodoPrimerSalario}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="periodoSegundoSalario" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{periodoSegundoSalario}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="periodoTercerSalario" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{periodoTercerSalario}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="gestionPrimerSalario" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{gestionPrimerSalario}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="gestionSegundoSalario" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{gestionSegundoSalario}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="gestionTercerSalario" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[$P{gestionTercerSalario}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalSalarioPromedio" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[$P{totalSalarioPromedio}]]></defaultValueExpression>
+	</parameter>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="59" splitType="Stretch">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+			<rectangle>
+				<reportElement x="0" y="2" width="572" height="57" uuid="007fed43-45f7-4025-8abe-0e8711b41c46"/>
+				<graphicElement>
+					<pen lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement style="titulo3" x="1" y="3" width="226" height="20" forecolor="#173157" uuid="fd92c936-32c8-4ba4-8176-c2062198cfca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10"/>
+				</textElement>
+				<text><![CDATA[ESTADO PLURINACIONAL DE BOLIVIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="titulo3" x="229" y="3" width="230" height="56" forecolor="#173157" uuid="f2699adb-0f4b-4317-acb1-62297ca722e5"/>
+				<box>
+					<pen lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="10"/>
+				</textElement>
+				<text><![CDATA[DECLARACIÓN JURADA DE REGISTRO AL RÉGIMEN DE REINTEGRO EN EFECTIVO AL IMPUESTO AL VALOR AGREGADO ]]></text>
+			</staticText>
+			<image hAlign="Center">
+				<reportElement positionType="Float" stretchType="ContainerHeight" x="24" y="23" width="181" height="35" uuid="468bdc16-f5f1-4d7f-b42b-784e6ba14192">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{IMAGE_logo_io}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="titulo3" x="461" y="3" width="110" height="20" isRemoveLineWhenBlank="true" forecolor="#173157" uuid="bdec5c9a-f7b9-47ba-a20b-5b63c78f38a1"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<text><![CDATA[F203]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="titulo3" x="461" y="31" width="110" height="26" forecolor="#173157" uuid="03e964dd-dad4-4f63-bdc9-59caf263c782"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="14"/>
+				</textElement>
+				<text><![CDATA[Re-IVA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="titulo3" x="461" y="23" width="110" height="8" isRemoveLineWhenBlank="true" forecolor="#173157" uuid="7774118c-ca7e-43c2-9c6c-50a98403b9fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Tahoma" size="6"/>
+				</textElement>
+				<text><![CDATA[R-1405-01]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="494" splitType="Stretch">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+			<frame>
+				<reportElement x="0" y="2" width="572" height="40" isRemoveLineWhenBlank="true" uuid="6ba27dfa-80ff-4a42-9f67-933e0843fd26">
+					<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="0" width="572" height="15" uuid="38eeb6f6-a4e7-4db8-959f-085020c21262"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement style="titulo3" positionType="Float" mode="Opaque" x="0" y="1" width="572" height="15" forecolor="#FFFFFF" backcolor="#173157" uuid="02326b36-ba11-4844-901b-82d57ec53b36"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[  DATOS GENERALES]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="17" width="572" height="23" uuid="06fe4d93-6296-4185-8283-6f7737b83915"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="98" y="20" width="175" height="15" isRemoveLineWhenBlank="true" uuid="f79d4d10-d0a1-4fe5-9de5-db04f7030eb9">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{numeroOrden}==null?"":$P{numeroOrden}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="6" y="20" width="90" height="15" uuid="2b1e4804-7ac1-4c43-a6e3-ad7aa1764804"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nº de Orden:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="276" y="20" width="85" height="15" uuid="2dd51f88-99e0-4447-bddf-b3152ff2451d"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Fecha de Registro:]]></text>
+				</staticText>
+				<textField>
+					<reportElement isPrintRepeatedValues="false" x="364" y="20" width="175" height="15" uuid="ba6bd039-32a6-42d5-b451-e58d5319081f">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{fechaRegistro}==null?"":$P{fechaRegistro}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="1" y="44" width="572" height="128" isRemoveLineWhenBlank="true" uuid="5891df50-7162-482a-a57f-e30c1b0b3d12">
+					<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="0" width="572" height="15" uuid="16bfbdc6-42d4-4be1-a381-ab6191e10dfc"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement style="titulo3" positionType="Float" mode="Opaque" x="0" y="1" width="572" height="15" forecolor="#FFFFFF" backcolor="#173157" uuid="ccb0c24d-94cb-4abe-a1e7-53defc92f796"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[  DATOS DEL BENEFICIARIO]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="18" width="572" height="111" uuid="fb082aba-fa44-4831-a471-f4e3c9038ff5"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="98" y="36" width="175" height="15" uuid="e6bb3afa-e936-4deb-abbb-5437038d0152">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{apellidoPaterno}==null?"":$P{apellidoPaterno}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="98" y="19" width="175" height="15" uuid="a6bf6a22-7e49-4d9f-a661-04b0c80c8bd8">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{tipoBeneficiario}==null?"":$P{tipoBeneficiario}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="5" y="19" width="90" height="15" uuid="ec2fe3ae-b834-4411-b660-fe462b24db9b"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Tipo de Beneficiario:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="36" width="90" height="15" uuid="06d52e84-8090-499d-9117-4f84fd2d4e6b"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Apellido Paterno:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="275" y="54" width="85" height="15" uuid="4d2fbe3d-bb38-4d0f-91b4-2d300bcff620"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nombres:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="275" y="37" width="85" height="15" uuid="5ef4f383-97db-46b4-b580-222dd377fd45"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Apellido Materno:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="363" y="37" width="175" height="15" uuid="84a7c681-4f0f-4faa-8875-33069541e4e1">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{apellidoMaterno}==null?"":$P{apellidoMaterno}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="363" y="54" width="175" height="15" uuid="93c888e9-a821-4ace-b4e5-fbfd4aaf9509">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{nombres}==null?"":$P{nombres}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="5" y="90" width="90" height="15" uuid="39fff7e2-68e3-4bfa-a72a-3d040c2e7236"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nº de Documento:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="98" y="72" width="175" height="15" uuid="3feb1231-cd42-433f-ae4a-a8fbfa660a54">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{fechaNacimiento}==null?"":$P{fechaNacimiento}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="5" y="54" width="90" height="15" uuid="3e801fde-fa8e-453b-acc2-6163daa01086"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Apellido de Casada:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="98" y="54" width="175" height="15" uuid="47c1e192-061c-4947-a89f-a51b567542a8">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{apellidoCasada}==null?"":$P{apellidoCasada}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="98" y="90" width="175" height="15" uuid="1b7ac12a-3e3c-4d7d-8cf1-cbe30c6ec3ca">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{numeroDocumentoIdentidad}==null?"":$P{numeroDocumentoIdentidad}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="276" y="92" width="85" height="15" uuid="b0ea1b86-150f-4cbd-bd2a-b8ecb292f3c5"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Tipo de Documento:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="5" y="107" width="90" height="15" uuid="ac655cbe-0ee6-41de-bbdb-0f0e54643c66"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nº de NUA/CUA:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="98" y="107" width="175" height="15" uuid="2e733aab-0cde-47ca-b591-e5f0465bc983">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{nuaCua}==null?"":$P{nuaCua}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="276" y="110" width="85" height="15" uuid="25cdf7af-3dce-4a52-99d1-bf19df9d5793"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Correo Electrónico:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="363" y="110" width="175" height="15" uuid="fba84a06-a56d-46c4-8254-15466e9de98b">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{correoElectronico}==null?"":$P{correoElectronico}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="363" y="92" width="175" height="15" uuid="ca77ba3b-4874-4f24-8703-5da39a545319">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{tipoDocumentoIdentidad}==null?"":$P{tipoDocumentoIdentidad}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="275" y="19" width="85" height="15" uuid="d003a1fb-23f1-474c-8f09-30bee1f2ed8f"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Código Persona:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="363" y="19" width="175" height="15" uuid="7cf53955-3e60-4fd0-810f-4f78c3c984bf">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{codigoPersona}==null?"":$P{codigoPersona}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="5" y="72" width="90" height="15" uuid="0f95a9b1-7560-4e28-b086-52c7e08632d8"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Fecha de Nacimiento:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="1" y="175" width="572" height="62" isRemoveLineWhenBlank="true" uuid="5387333a-83f0-4543-8bdc-1ed887289151">
+					<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+				<rectangle>
+					<reportElement positionType="Float" x="0" y="0" width="572" height="15" uuid="50d93e7d-998a-4711-bf6a-967d39b1e1de"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement style="titulo3" mode="Opaque" x="0" y="1" width="572" height="15" forecolor="#FFFFFF" backcolor="#173157" uuid="b7e3d1e8-aabc-4537-8631-59ec417c09de"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[  DATOS DE LA DIRECCIÓN]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="17" width="572" height="43" uuid="f1b9a05a-7fa8-48e2-b351-7120a9ddc409"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="5" y="21" width="90" height="15" uuid="16692db9-0bef-4c6e-bab6-48fac64ca617"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Dirección:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="98" y="21" width="440" height="15" uuid="9355f857-c246-436b-bebf-4c0cd5c6e7bd">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{direccion}==null?"":$P{direccion}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="5" y="40" width="90" height="15" uuid="f87db7ff-a4c5-4870-81bd-371efae922ac"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Telefono Fijo:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="98" y="40" width="138" height="15" uuid="9ffeeb67-5e82-474d-b808-455d5ef4bd8d">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{telefono}==null?"":$P{telefono}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="239" y="40" width="90" height="15" isRemoveLineWhenBlank="true" uuid="6ab8853e-1f22-4fd4-b9d3-0e306e5541f2"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Telefono Celular:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="331" y="40" width="208" height="15" uuid="55649279-364d-44b3-91e1-739d98d60ef9">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{celular}==null?"":$P{celular}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="1" y="237" width="572" height="90" isRemoveLineWhenBlank="true" uuid="140a512b-21c5-4446-9c78-a54f00521f2e">
+					<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="0" width="572" height="15" uuid="f586af67-849a-4cee-b5c0-b5cbc50ed2b1"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement style="titulo3" positionType="Float" mode="Opaque" x="0" y="1" width="572" height="15" forecolor="#FFFFFF" backcolor="#173157" uuid="1e9900bd-ba00-48dc-8bab-beb831c292cf"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[  DATOS DE LOS INGRESOS]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="17" width="572" height="73" uuid="0785b8c2-a13b-4025-9b32-06acedb72899"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle>
+					<reportElement x="54" y="22" width="465" height="57" uuid="35307272-9a87-46f2-8755-6a0d6bcd4633"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement style="titulo3" x="55" y="36" width="68" height="10" uuid="5bc86c27-b24c-475e-8e83-d28438254e16"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[MES 1]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="titulo3" x="55" y="46" width="68" height="10" isRemoveLineWhenBlank="true" uuid="e014b0fe-86bb-434d-b74f-67a5e2343145"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[MES 2]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="titulo3" x="55" y="56" width="68" height="10" isPrintInFirstWholeBand="true" uuid="c640a204-0223-4dc5-a905-ebbfaa725df8"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[MES 3]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="titulo3" x="55" y="67" width="68" height="10" isPrintInFirstWholeBand="true" uuid="5d903a1d-1974-4c1d-8345-4f1d0a706f31"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PROMEDIO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="titulo3" x="125" y="24" width="130" height="10" isPrintInFirstWholeBand="true" uuid="f291e4b0-7aba-4b80-ba55-200a951a067d"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[MES]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="titulo3" x="257" y="24" width="130" height="10" isPrintInFirstWholeBand="true" uuid="7a743c92-8c8d-4c3d-9458-57ee38344ba9"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[AÑO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="titulo3" x="389" y="24" width="130" height="10" isPrintInFirstWholeBand="true" uuid="26d2a627-c14b-47d8-b1cd-1fd0c5618838"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[IMPORTE]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="125" y="36" width="130" height="10" isRemoveLineWhenBlank="true" uuid="13e9f164-d406-4a73-8c93-67226ceb8780">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{periodoPrimerSalario}==null?"":$P{periodoPrimerSalario}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="125" y="47" width="130" height="10" isRemoveLineWhenBlank="true" uuid="82a79f3e-870c-4674-89d8-e4e6150efa42">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{periodoSegundoSalario}==null?"":$P{periodoSegundoSalario}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="125" y="57" width="130" height="10" isRemoveLineWhenBlank="true" uuid="c890fd50-913a-4650-9fda-294917c5935d">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{periodoTercerSalario}==null?"":$P{periodoTercerSalario}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement isPrintRepeatedValues="false" x="257" y="36" width="130" height="10" isRemoveLineWhenBlank="true" uuid="fdb6e935-c469-474d-a3b8-ebcf92bf33e7">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{gestionPrimerSalario}==null?"":$P{gestionPrimerSalario}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="257" y="47" width="130" height="10" isRemoveLineWhenBlank="true" uuid="5a779444-ea42-4dd1-bfad-7ae3ceac9d88">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{gestionSegundoSalario}==null?"":$P{gestionSegundoSalario}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="257" y="57" width="130" height="10" isRemoveLineWhenBlank="true" uuid="b582c689-b0fd-47a4-a04e-a205c83c4dd2">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{gestionTercerSalario}==null?"":$P{gestionTercerSalario}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0" isBlankWhenNull="false">
+					<reportElement positionType="Float" isPrintRepeatedValues="false" x="388" y="36" width="130" height="10" isRemoveLineWhenBlank="true" uuid="7bc65130-cc00-4247-9979-e605233eda0d">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{primerSalario}==null?0:$P{primerSalario}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0">
+					<reportElement x="388" y="47" width="130" height="10" isRemoveLineWhenBlank="true" uuid="0b128798-5a4d-4d41-8846-5b696ddb53b9">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{segundoSalario}==null?0:$P{segundoSalario}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0">
+					<reportElement x="388" y="57" width="130" height="10" isRemoveLineWhenBlank="true" uuid="fb5f7a56-f6fe-48d6-8e15-0d9d22f703cd">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{tercerSalario}==null?0:$P{tercerSalario}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0">
+					<reportElement x="388" y="69" width="130" height="10" isRemoveLineWhenBlank="true" uuid="6a860d76-8ee1-4bbd-bf63-8d68b8bffa3a">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{totalSalarioPromedio}==null?0:$P{totalSalarioPromedio}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="54" y="35" width="465" height="1" uuid="e31c447b-4e1c-417b-8181-110a4b0fee73"/>
+				</line>
+				<line>
+					<reportElement x="54" y="46" width="465" height="1" uuid="e4e1b086-04ce-4c1b-85c1-47264f95c06a"/>
+				</line>
+				<line>
+					<reportElement x="54" y="56" width="465" height="1" uuid="c78a13f3-ff86-4f3b-8a15-46d644e0576b"/>
+				</line>
+				<line>
+					<reportElement x="54" y="67" width="465" height="1" uuid="ccc24e47-d197-4c66-8859-2768c3c5cd1b"/>
+				</line>
+				<line>
+					<reportElement x="123" y="22" width="1" height="57" uuid="9e06e7df-6d5c-4ae7-96f1-31f101c3e4b6"/>
+				</line>
+				<line>
+					<reportElement x="255" y="22" width="1" height="57" uuid="3bfadbf9-420f-4354-87e7-cf5b3e776b49"/>
+				</line>
+				<line>
+					<reportElement x="387" y="22" width="1" height="57" uuid="a91ec303-baf2-4586-bdc9-e861737ec026"/>
+				</line>
+			</frame>
+			<frame>
+				<reportElement x="1" y="329" width="572" height="60" isRemoveLineWhenBlank="true" uuid="fd581fe2-4fbd-474d-adad-75ea4fd05dcf">
+					<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="0" width="572" height="17" uuid="73ca4959-8ef7-4ccc-8226-3f4a92ffdbe9"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement style="titulo3" positionType="Float" mode="Opaque" x="0" y="1" width="572" height="15" forecolor="#FFFFFF" backcolor="#173157" uuid="a1f98333-61a1-4a1e-b34e-7140c7a0fded"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[  DATOS DE LA CUENTA BANCARIA]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="17" width="572" height="43" uuid="b39fa9a3-9060-43af-a2b3-7f279913afc9"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="435" y="21" width="130" height="15" uuid="ea5093a8-e9fa-4317-b0e6-facc43fcf95b">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{nroCuenta}==null?"":$P{nroCuenta}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="353" y="21" width="80" height="15" uuid="a89fc44a-4799-45e1-a121-9232db5f974f"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Número de Cuenta:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="7" y="21" width="100" height="15" uuid="46bbf775-957c-4550-94ad-eac77877706a"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Entidad Financiera:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="109" y="21" width="240" height="15" uuid="7cd53f8f-9bb1-4834-9b7d-5d2a6e3baa27">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{entidadFinanciera}==null?"":$P{entidadFinanciera}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="7" y="39" width="100" height="15" uuid="8407c521-4bba-44a6-9b90-31921c98340b"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Tipo cuenta:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="109" y="39" width="240" height="15" uuid="61259794-a137-4f64-b756-d5d3ee4ec152">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{tipoCuenta}==null?"":$P{tipoCuenta}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="1" y="432" width="572" height="62" isRemoveLineWhenBlank="true" uuid="bdd866cf-9d82-4b33-9662-fa994acf0a85">
+					<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="3" width="572" height="15" uuid="7f6f843a-4067-409f-ae45-7b2b3aee9149"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement style="titulo3" positionType="Float" mode="Opaque" x="0" y="3" width="572" height="15" forecolor="#FFFFFF" backcolor="#173157" uuid="355ad191-2938-4eb7-853a-3a6c8969c2e8"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[  DATOS DEL USUARIO SIAT]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="20" width="572" height="41" uuid="4806aee0-92cb-4098-991a-e14cdcb17474"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="109" y="24" width="170" height="15" uuid="52bce26b-dbac-4e58-888c-0d6913a4dd2e">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{tipoUsuario}==null?"":$P{tipoUsuario}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="281" y="23" width="100" height="15" uuid="8cd9c9f5-c351-4492-b9af-088b2bd5050c"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Código Beneficiario:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="384" y="23" width="176" height="15" uuid="02b01936-d3a4-4e0b-9aa3-582350e97fad">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{codigoPersona}==null?"":$P{codigoPersona}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="7" y="24" width="100" height="15" uuid="5abeda3b-1d6f-43ec-9d95-638946b67a70"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Tipo Usuario:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="7" y="40" width="100" height="15" uuid="48f453de-b781-43d8-8ce8-d1a576620dd6"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nombre de Usuario:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="110" y="41" width="170" height="15" uuid="7641bbdd-bbae-49e5-86ef-e00d015ba58f">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{nombreUsuario}==null?"":$P{nombreUsuario}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="1" y="392" width="572" height="38" isRemoveLineWhenBlank="true" uuid="23e34bd1-788f-4153-b6eb-876b87f60c42">
+					<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="-3" width="572" height="42" uuid="aefcf22a-9be5-47c5-aa41-fbb564ba147a"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement mode="Opaque" x="1" y="-2" width="570" height="41" backcolor="#CFD9E3" uuid="f8e215d9-c73f-4c02-9d7f-43d0b45f29f3"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="Tahoma" size="6"/>
+					</textElement>
+					<text><![CDATA[(*) La cuenta bancaria ingresada será validada por la Entidad Financiera emisora en un plazo establecido de 48 horas. 
+Para consultar el resultado de la validación de su cuenta bancaria, puede ingresar a la opción "Verificación cuenta beneficiario" utilizando las credenciales configuradas al momento de realizar su registro de Beneficiario.
+En caso de que la cuenta bancaria fuera observada, podrá modificar la misma a través de la opción “Beneficiarios Re-IVA” del Sistema Integrado de la Administración Tributaria (SIAT) del portal “Servicio al Contribuyente” de la Oficina Virtual del Servicio de Impuestos Nacionales.
+]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="13" splitType="Stretch">
+			<textField>
+				<reportElement style="base" x="444" y="3" width="96" height="10" uuid="c5329ff1-49c7-455a-85df-cc001d7ad699"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="base" x="540" y="3" width="32" height="10" uuid="f2ec541e-8a4b-4b94-b9e8-db745cd7d9ca"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="74">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==$V{PAGE_NUMBER}]]></printWhenExpression>
+			<frame>
+				<reportElement x="1" y="2" width="572" height="72" isRemoveLineWhenBlank="true" uuid="7fe165a4-ee72-4197-960c-416b984a8774">
+					<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+				<rectangle>
+					<reportElement x="0" y="33" width="572" height="39" uuid="1c7f2526-379b-4d00-afd0-d7c369c8545e"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle>
+					<reportElement x="0" y="0" width="572" height="33" uuid="795ce31d-7523-438e-b1b0-e50e66fb69a3"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement stretchType="ContainerBottom" mode="Opaque" x="0" y="1" width="572" height="30" isPrintInFirstWholeBand="true" backcolor="#CFD9E3" uuid="c857b11b-350a-4ef2-b0f6-cd174f6083ee"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="5.9"/>
+					</textElement>
+					<text><![CDATA[La información proporcionada al Servicio de Impuestos Nacionales en el presente Formulario, es verdadera, auténtica y fidedigna y tiene la calidad de Declaración Jurada para efectos legales.
+Artículo N° 22 y Artículo N° 78 Parágrafo I de la Ley N° 2492 Código Tributario Boliviano]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement x="0" y="31" width="572" height="15" backcolor="#E3DEDE" uuid="b797778f-ebad-46ab-a584-864aa6be3477"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="2" y="33" width="284" height="12" uuid="f6c51b09-d6a7-412b-bb51-69dec303cbbb"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nombre y Apellido Beneficiario]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="290" y="33" width="280" height="12" uuid="f8758aec-75a1-47db-aff6-55ff548c2c47"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Número de Documento]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="290" y="52" width="280" height="15" uuid="fba6cc23-510a-48b3-861f-cefee20a7960">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{numeroDocumentoIdentidad}==null?"":$P{numeroDocumentoIdentidad}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="2" y="52" width="284" height="15" uuid="e1bca070-fbf7-4c46-b565-61d015d26345">
+						<printWhenExpression><![CDATA[new Boolean ($V{PAGE_NUMBER}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="7" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{nombreCompleto}==null?"":$P{nombreCompleto}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="288" y="31" width="1" height="41" uuid="5d30b2c2-c87e-4f09-ad92-5b52a788becf"/>
+				</line>
+			</frame>
+		</band>
+	</summary>
+</jasperReport>

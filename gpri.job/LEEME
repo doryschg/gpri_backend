@@ -1,0 +1,12 @@
+Para compilar el proyecto:
+```bash
+$ mvn -s ci_settings.xml clean package
+```
+
+Enviar la imagen a docker registry:
+```bash
+$ sudo docker build -t $REGISTRY/sre_sfe_gpri_job .
+$ sudo docker push  $REGISTRY/sre_sfe_gpri_job:latest
+```
+
+Para configurar las horas en las que se ejecuta la aplicacion modificar el archivo `cronjobs`, ver en `https://cron.help/`
